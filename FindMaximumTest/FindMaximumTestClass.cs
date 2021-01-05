@@ -34,5 +34,29 @@ namespace FindMaximumTest
             int output = maximumNumberCheck.MaxIntegerNumber(18, 6, 34);
             Assert.AreEqual(34, output);
         }
+        //T.C2.1
+        [Test]
+        public void GivenMaxFloatNumberAtFirstPosition_ShouldValidate_AndReturnMaximumFloatNumber()
+        {
+            MaximumNumberCheck maximumNumberCheck = new MaximumNumberCheck();
+            float output = maximumNumberCheck.MaxFloatNumber(34.56f, 25.89f, 5.55f);
+            Assert.AreEqual(34.56f, output);
+        }
+        //T.C2.2
+        [Test]
+        public void GivenMaxFloatNumberAtSecondPosition_ShouldValidate_AndReturnMaximumFloatNumber()
+        {
+            MaximumNumberCheck maximumNumberCheck = new MaximumNumberCheck();
+            float output = maximumNumberCheck.MaxFloatNumber(25.89f, 34.56f, 5.55f);
+            Assert.AreEqual(34.56f, output);
+        }
+        //T.C2.3
+        [Test]
+        public void GivenMaxFloatNumberAtThirdPosition_ShouldValidate_AndReturnMaximumFloatNumber()
+        {
+            MaximumNumberCheck maximumNumberCheck = new MaximumNumberCheck();
+            float output = maximumNumberCheck.MaxFloatNumber(25.89f, 5.55f, 34.56f);
+            Assert.AreEqual(34.56f, output);
+        }
     }
 }
