@@ -5,18 +5,27 @@ using System.Text;
 namespace FindMaximumNumber_Generics
 {
     public class MaximumNumberCheckGenericClass<T> where T : IComparable<T>
-    {        
-        public T MaxValue(T firstValue, T secondValue, T thirdValue)
+    {
+        T firstValue, secondValue, thirdValue;
+
+        public MaximumNumberCheckGenericClass(T firstValue, T secondValue, T thirdValue)
         {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
+            this.firstValue = firstValue;
+            this.secondValue = secondValue;
+            this.thirdValue = thirdValue;
+        }
+
+        public T MaxValue()
+        {
+            if (this.firstValue.CompareTo(this.secondValue) > 0 && this.firstValue.CompareTo(this.thirdValue) > 0)
             {
                 return firstValue;
             }
-            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+            if (this.secondValue.CompareTo(this.firstValue) > 0 && this.secondValue.CompareTo(this.thirdValue) > 0)
             {
                 return secondValue;
             }
-            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
+            if (this.thirdValue.CompareTo(this.firstValue) > 0 && this.thirdValue.CompareTo(this.secondValue) > 0)
             {
                 return thirdValue;
             }
