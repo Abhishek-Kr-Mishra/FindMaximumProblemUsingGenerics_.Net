@@ -11,6 +11,8 @@ namespace FindMaximumNumber_Generics
             Console.WriteLine(intOutput);
             float floatOutput = maximumNumberCheck.MaxFloatNumber(15.8f, 17.77f, 17.76f);
             Console.WriteLine(floatOutput);
+            string stringOutput = maximumNumberCheck.MaxStringValue("Apple", "Peach", "Banana");
+            Console.WriteLine(stringOutput);
         }
     }
 }
