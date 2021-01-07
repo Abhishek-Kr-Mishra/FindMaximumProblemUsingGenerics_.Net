@@ -15,12 +15,9 @@ namespace FindMaximumNumber_Generics
             Console.WriteLine(stringOutput);
 
             Console.WriteLine("Max Values By Generic Class");
-            int intOutputByGeneric = new MaximumNumberCheckGenericClass<int>(10, 23, 43).MaxValue();
-            Console.WriteLine(intOutputByGeneric);
-            float floatOutputByGeneric = new MaximumNumberCheckGenericClass<float>(15.8f, 17.77f, 17.76f).MaxValue();
-            Console.WriteLine(floatOutputByGeneric);
-            string stringOutputByGeneric = new MaximumNumberCheckGenericClass<string>("Apple", "Peach", "Banana").MaxValue();
-            Console.WriteLine(stringOutputByGeneric);
+            new MaximumNumberCheckGenericClass<int>(10, 23, 43).MaxValue();
+            new MaximumNumberCheckGenericClass<float>(15.8f, 17.77f, 17.76f).MaxValue();
+            new MaximumNumberCheckGenericClass<string>("Apple", "Peach", "Banana").MaxValue();
         }
     }
 }

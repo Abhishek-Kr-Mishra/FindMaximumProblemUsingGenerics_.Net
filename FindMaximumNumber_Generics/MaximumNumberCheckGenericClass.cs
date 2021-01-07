@@ -31,9 +31,14 @@ namespace FindMaximumNumber_Generics
             }
             throw new Exception("Frist Value,Second Value and Third Value.. All are Same");
         }
+        public void PrintMax(T value)
+        {
+            Console.WriteLine("Maximum value "+value);
+        }
         public T MaxValue()
         {
             T value = MaximumNumberCheckGenericClass<T>.MaxValue(this.firstValue, this.secondValue, this.thirdValue);
+            PrintMax(value);
             return value;
         }
     }
