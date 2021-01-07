@@ -15,21 +15,26 @@ namespace FindMaximumNumber_Generics
             this.thirdValue = thirdValue;
         }
 
-        public T MaxValue()
+        public static T MaxValue(T firstValue, T secondValue, T thirdValue)
         {
-            if (this.firstValue.CompareTo(this.secondValue) > 0 && this.firstValue.CompareTo(this.thirdValue) > 0)
+            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
             {
                 return firstValue;
             }
-            if (this.secondValue.CompareTo(this.firstValue) > 0 && this.secondValue.CompareTo(this.thirdValue) > 0)
+            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
             {
                 return secondValue;
             }
-            if (this.thirdValue.CompareTo(this.firstValue) > 0 && this.thirdValue.CompareTo(this.secondValue) > 0)
+            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
             {
                 return thirdValue;
             }
             throw new Exception("Frist Value,Second Value and Third Value.. All are Same");
+        }
+        public T MaxValue()
+        {
+            T value = MaximumNumberCheckGenericClass<T>.MaxValue(this.firstValue, this.secondValue, this.thirdValue);
+            return value;
         }
     }
 }
